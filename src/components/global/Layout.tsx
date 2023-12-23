@@ -9,7 +9,7 @@ function Layout(props: LayoutProps) {
   const {children} = props;
 
   return (
-    <div>
+    <div className="max-w-[1920px] m-auto">
       <Navbar />
       {children}
     </div>

@@ -31,16 +31,16 @@ const config: Config = {
       },
     },
     fontSize: {
-      xs: ["12px", {lineHeight: "1.8rem"}],
+      xs: ["12px", {lineHeight: "1.8"}],
       sm: ["14px", {lineHeight: "20px"}],
-      md: ["16px", {lineHeight: "1.8rem"}],
+      md: ["16px", {lineHeight: "1.8"}],
       base: ["18px", {lineHeight: "20px"}],
       lg: ["20px", {lineHeight: "20px"}],
       xl: ["24px", {lineHeight: "20px", letterSpacing: "1.3px"}],
       "2xl": ["30px", {lineHeight: "20px"}],
-      "3xl": ["40px", {lineHeight: "1.4rem", letterSpacing: "2.4px"}],
-      "4xl": ["48px", {lineHeight: "1.4rem", letterSpacing: "2.4px"}],
-      "5xl": ["60px", {lineHeight: "1.4rem"}],
+      "3xl": ["40px", {lineHeight: "1.4", letterSpacing: "2.4px"}],
+      "4xl": ["48px", {lineHeight: "1.4", letterSpacing: "2.4px"}],
+      "5xl": ["60px", {lineHeight: "1.4"}],
     },
     boxShadow: {
       sm: "-7 0px 5px rgba(71,71,71,.2)",
@@ -49,7 +49,9 @@ const config: Config = {
       xl: "0 0px 10px rgba(21,19,19,.1)",
       "2xl": "0 5px 20px rgba(21,19,19,.4)",
     },
-    backgroundImage: {},
+    backgroundImage: {
+      headerImages: "url('/images/banner.jpg')",
+    },
     fontFamily: {
       Poppins: ["Poppins", ...fontFamily.sans],
     },
@@ -58,6 +60,12 @@ const config: Config = {
       padding: {
         DEFAULT: "1rem",
       },
+    },
+    screens: {
+      sm: "600px",
+      md: "768px",
+      lg: "992px",
+      xl: "1200px",
     },
   },
   plugins: [],
