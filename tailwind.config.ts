@@ -17,10 +17,12 @@ const config: Config = {
           "300": "#8f949d",
           "400": "#7b8088",
           "500": "#777f85",
+          "600": "#d3d6d9",
           "700": "#dde0e4",
           "800": "#343a3f",
         },
         slate: {
+          "200": "#f8fafb",
           "300": "#a5adb3",
           "400": "#767f86",
           "500": "#505866",
@@ -48,12 +50,13 @@ const config: Config = {
       lg: "0 0px 10px rgba(71,71,71,.2)",
       xl: "0 0px 10px rgba(21,19,19,.1)",
       "2xl": "0 5px 20px rgba(21,19,19,.4)",
+      "3xl": "0 2px 5px rgba(0,0,0,.2)",
     },
     backgroundImage: {
       headerImages: "url('/images/banner.jpg')",
     },
     fontFamily: {
-      Poppins: ["Poppins", ...fontFamily.sans],
+      Poppins: ["'Poppins'", ...fontFamily.sans],
     },
     container: {
       center: true,
@@ -65,7 +68,7 @@ const config: Config = {
       sm: "600px",
       md: "768px",
       lg: "992px",
-      xl: "1200px",
+      xl: "1170px",
     },
   },
   plugins: [],

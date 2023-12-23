@@ -17,29 +17,53 @@ const itemsCards = [
     description: "185 listings",
   },
   {
-    icon: "/images/icons8-restaurant-64.png",
+    icon: "/images/icons8-pills-64.png",
     title: "Healthcaree",
     description: "200 listings",
   },
   {
-    icon: "/images/icons8-restaurant-64.png",
+    icon: "/images/icons8-air-recirculation-50.png",
     title: "Automotion",
     description: "120 listings",
+  },
+];
+
+const loremCards = [
+  {
+    icon: "/images/icons8-lightbulb-64.png",
+    title: "Choose what to Do",
+    description:
+      "Lorem ipsum dolor sit amet, consecte adipisicing elit, sed do eiusmod tempor incididunt ut laboremagna aliqua.",
+    btn: "Read More",
+  },
+  {
+    icon: "/images/icons8-lightbulb-64.png",
+    title: "Choose what to Do",
+    description:
+      "Lorem ipsum dolor sit amet, consecte adipisicing elit, sed do eiusmod tempor incididunt ut laboremagna aliqua.",
+    btn: "Read More",
+  },
+  {
+    icon: "/images/icons8-lightbulb-64.png",
+    title: "Choose what to Do",
+    description:
+      "Lorem ipsum dolor sit amet, consecte adipisicing elit, sed do eiusmod tempor incididunt ut laboremagna aliqua.",
+    btn: "Read More",
   },
 ];
 
 function HowItWork() {
   return (
     <section>
-      <div className="container">
-        <div className="flex gap-5 justify-between mb-5 relative -top-24 z-50">
+      <div className="container mb-[90px]">
+        <div className="flex flex-wrap gap-5 justify-between mb-5 relative -top-24 z-50">
           {itemsCards.map(({icon, title, description}, index) => (
             <div
               key={index}
-              className="flex flex-col items-center justify-center py-[25px] px-[68px] shadow-lg group bg-white hover:bg-primary duration-300 rounded"
+              className="flex flex-col items-center justify-center py-[25px] sm:max-w-[205px] px-1 w-full shadow-lg group bg-white hover:bg-primary duration-300 rounded"
             >
               <img className="w-11 h-11" src={icon} alt="" />
-              <h2 className="text-md font-medium text-gray-800 group-hover:text-white mt-4 mb-3">
+              <h2 className="text-md font-medium text-gray-800 group-hover:text-white mt-4 mb-2">
                 {title}
               </h2>
               <p className="text-sm text-slate-400 group-hover:text-white">
@@ -54,6 +78,27 @@ function HowItWork() {
         <p className="text-md text-slate-400 text-center mb-[73px]">
           Learn More about how our website works
         </p>
+        <div className="grid grid-cols-3 gap-8">
+          {loremCards.map(({icon, title, description, btn}, index) => (
+            <div
+              key={index}
+              className="py-[50px] px-[42px] w-full shadow-md hover:bg-primary duration-300 rounded group flex flex-col justify-center items-center"
+            >
+              <div className="mb-9">
+                <img src={icon} alt="" />
+              </div>
+              <h2 className="text-base font-medium group-hover:text-white text-gray-800 mb-5">
+                {title}
+              </h2>
+              <p className="text-sm leading-relaxed text-center text-slate-400 group-hover:text-white mb-6">
+                {description}
+              </p>
+              <button className="text-xs text-slate-400 border border-gray-600 rounded px-5 py-1.5 group-hover:bg-white">
+                {btn}
+              </button>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );

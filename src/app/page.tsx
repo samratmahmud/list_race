@@ -1,3 +1,4 @@
+import Explore from "./home/Explore";
 import HowItWork from "./home/HowItWork";
 import Header from "./home/header/Header";
 
@@ -6,6 +7,7 @@ export default function Home() {
     <main>
       <Header />
       <HowItWork />
+      <Explore />
     </main>
   );
 }
