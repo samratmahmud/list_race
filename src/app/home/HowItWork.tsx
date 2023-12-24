@@ -32,21 +32,21 @@ const loremCards = [
   {
     icon: "/images/icons8-lightbulb-64.png",
     title: "Choose what to Do",
-    description:
+    contain:
       "Lorem ipsum dolor sit amet, consecte adipisicing elit, sed do eiusmod tempor incididunt ut laboremagna aliqua.",
     btn: "Read More",
   },
   {
-    icon: "/images/icons8-lightbulb-64.png",
-    title: "Choose what to Do",
-    description:
+    icon: "/images/icons8-binoculars-32.png",
+    title: "Find what you want",
+    contain:
       "Lorem ipsum dolor sit amet, consecte adipisicing elit, sed do eiusmod tempor incididunt ut laboremagna aliqua.",
     btn: "Read More",
   },
   {
-    icon: "/images/icons8-lightbulb-64.png",
-    title: "Choose what to Do",
-    description:
+    icon: "/images/icons8-location-64.png",
+    title: "Explore amazing Place",
+    contain:
       "Lorem ipsum dolor sit amet, consecte adipisicing elit, sed do eiusmod tempor incididunt ut laboremagna aliqua.",
     btn: "Read More",
   },
@@ -79,19 +79,19 @@ function HowItWork() {
           Learn More about how our website works
         </p>
         <div className="grid grid-cols-3 gap-8">
-          {loremCards.map(({icon, title, description, btn}, index) => (
+          {loremCards.map(({icon, title, contain, btn}, index) => (
             <div
               key={index}
-              className="py-[50px] px-[42px] w-full shadow-md hover:bg-primary duration-300 rounded group flex flex-col justify-center items-center"
+              className="py-[50px] px-[42px] w-full shadow-md hover:bg-primary duration-500 rounded group flex flex-col justify-center items-center"
             >
-              <div className="mb-9">
+              <div className="mb-9 bg-slate-100 px-5 py-5 group-hover:bg-white rounded-full w-20 h-20 flex items-center justify-center">
                 <img src={icon} alt="" />
               </div>
               <h2 className="text-base font-medium group-hover:text-white text-gray-800 mb-5">
                 {title}
               </h2>
               <p className="text-sm leading-relaxed text-center text-slate-400 group-hover:text-white mb-6">
-                {description}
+                {contain}
               </p>
               <button className="text-xs text-slate-400 border border-gray-600 rounded px-5 py-1.5 group-hover:bg-white">
                 {btn}

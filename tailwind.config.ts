@@ -22,6 +22,7 @@ const config: Config = {
           "800": "#343a3f",
         },
         slate: {
+          "100": "#eef2f6",
           "200": "#f8fafb",
           "300": "#a5adb3",
           "400": "#767f86",
