@@ -1,4 +1,4 @@
-import Explore from "./home/Explore";
+import Explore from "./home/explore/Explore";
 import HowItWork from "./home/HowItWork";
 import Header from "./home/header/Header";
 
