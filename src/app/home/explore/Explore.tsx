@@ -1,5 +1,7 @@
 "use client";
+import {off} from "process";
 import React from "react";
+import ExploreCards from "./ExploreCards";
 
 const vanuecards = [
   {
@@ -12,26 +14,101 @@ const vanuecards = [
       },
     ],
     title: "Tommy Helfinger Bar",
-    ratingpoint: "5.0",
-    ratingPerson: "10 Ratings ",
-    dolar: "Form 5$-300$",
-    vanue: " Resturent",
+    ratingSide: [
+      {
+        ratingpoint: "5.0",
+        ratingPerson: "10 Ratings ",
+        dolar: "5$-300$",
+        vanue: " Resturent",
+        from: "from",
+        className: "bg-purple-400",
+      },
+    ],
     picture: "/images/person.png",
     describtion:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incid ut labore et dolore magna aliqua....",
-    offOn: "Close Now",
     iconGroup: [
       {
-        location: "/images/",
-        download: "/images/",
-        like: "/images/",
+        offOn: "Close Now",
+        icons: [
+          "/images/icons8-location-48 (1).png",
+          "/images/icons8-upload-48.png",
+          "/images/icons8-love-24.png",
+        ],
+      },
+    ],
+  },
+  {
+    thumbnail: "/images/e2.jpg",
+    explore: [
+      {
+        title: "featured",
+        icon: "/images/icons8-drag-50.png",
+        icon2: "/images/icons8-bookmark-32.png",
+      },
+    ],
+    title: "Swim And Dine Resort",
+    ratingSide: [
+      {
+        ratingpoint: "4.5",
+        ratingPerson: "8 Ratings ",
+        dolar: "50$-500$",
+        vanue: "Hotel",
+        from: "from",
+        className: "bg-green-600",
+      },
+    ],
+    picture: "/images/person.png",
+    describtion:
+      "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incid ut labore et dolore magna aliqua....",
+    iconGroup: [
+      {
+        offOn: "Open Now",
+        icons: [
+          "/images/icons8-location-48 (1).png",
+          "/images/icons8-upload-48.png",
+          "/images/icons8-love-24.png",
+        ],
+      },
+    ],
+  },
+  {
+    thumbnail: "/images/e3.jpg",
+    explore: [
+      {
+        title: "best rated",
+        icon: "/images/icons8-drag-50.png",
+        icon2: "/images/icons8-bookmark-32.png",
+      },
+    ],
+    title: "Europe Tour",
+    ratingSide: [
+      {
+        ratingpoint: "5.0",
+        ratingPerson: "15 Ratings ",
+        dolar: "5k$-10k$",
+        vanue: "Destination",
+        from: "from",
+        className: "bg-orange-500",
+      },
+    ],
+    picture: "/images/person.png",
+    describtion:
+      "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incid ut labore et dolore magna aliqua....",
+    iconGroup: [
+      {
+        offOn: "Close Now",
+        icons: [
+          "/images/icons8-location-48 (1).png",
+          "/images/icons8-upload-48.png",
+          "/images/icons8-love-24.png",
+        ],
       },
     ],
   },
 ];
 
 function Explore() {
-  const [show, setShow] = React.useState(false);
   return (
     <section className="bg-slate-200 pt-[117px] pb-24">
       <div className="container">
@@ -41,41 +118,31 @@ function Explore() {
         <p className="text-md text-slate-400 mb-20 text-center">
           Explore New place, food, culture around the world and many more
         </p>
-        <div
-          onMouseEnter={() => setShow(true)}
-          onMouseLeave={() => setShow(false)}
-        >
-          {vanuecards.map(({thumbnail, explore}, index) => (
-            <div key={index} className="relative group">
-              <div>
-                <img className="w-full" src={thumbnail} alt="" />
-              </div>
-              <div
-                className={`absolute bottom-4 w-full px-2.5 animate__animated animate__faster	500ms ${
-                  show ? "animate__fadeInUp" : "animate__fadeOutDown"
-                }`}
-              >
-                {explore.map(({title, icon, icon2}, index) => (
-                  <div key={index} className="flex justify-between">
-                    <div
-                      role="button"
-                      className="text-xs bg-primary px-3.5 rounded text-gray-200 flex items-center justify-center capitalize"
-                    >
-                      {title}
-                    </div>
-                    <div className="bg-gray-800 px-2 flex gap-2 py-1 h-7 w-[74px]">
-                      <span>
-                        <img className="w-5 h-5 rotate-12" src={icon} alt="" />
-                      </span>
-                      <span>
-                        <img className="w-5 h-5" src={icon2} alt="" />
-                      </span>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          ))}
+        <div className="grid grid-cols-3 gap-7">
+          {vanuecards.map(
+            (
+              {
+                thumbnail,
+                explore,
+                ratingSide,
+                title,
+                describtion,
+                picture,
+                iconGroup,
+              },
+              index
+            ) => (
+              <ExploreCards
+                thumbnail={thumbnail}
+                explore={explore}
+                ratingSide={ratingSide}
+                title={title}
+                describtion={describtion}
+                picture={picture}
+                iconGroup={iconGroup}
+              />
+            )
+          )}
         </div>
       </div>
     </section>

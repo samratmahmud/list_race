@@ -13,6 +13,7 @@ const config: Config = {
         primary: "#ff545a",
         red: {"500": "#fd4043", "600": "#f43032"},
         gray: {
+          "100": "#edeff1",
           "200": "#fcfcfc",
           "300": "#8f949d",
           "400": "#7b8088",
@@ -29,8 +30,11 @@ const config: Config = {
           "500": "#505866",
           "600": "#859098",
           "700": "#a09e9c",
+          "800": "#e1e5eb",
         },
-        green: {"500": "#00c437"},
+        purple: {"400": "#bd70ff"},
+        green: {"500": "#00c437", "600": "#00c61c"},
+        orange: {"500": "#ffcc5d"},
       },
     },
     fontSize: {
@@ -52,6 +56,7 @@ const config: Config = {
       xl: "0 0px 10px rgba(21,19,19,.1)",
       "2xl": "0 5px 20px rgba(21,19,19,.4)",
       "3xl": "0 2px 5px rgba(0,0,0,.2)",
+      "4xl": "0 10px 20px rgba(21,19,19,.2)",
     },
     backgroundImage: {
       headerImages: "url('/images/banner.jpg')",
