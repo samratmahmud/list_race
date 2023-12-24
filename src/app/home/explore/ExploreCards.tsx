@@ -1,4 +1,5 @@
 import React from "react";
+import Rating from "./Rating";
 
 interface ExploreCardsProps {
   thumbnail: string;
@@ -19,6 +20,7 @@ interface ExploreCardsProps {
   picture: string;
   describtion: string;
   iconGroup: {
+    classNames?: string;
     offOn: string;
     icons: string[];
   }[];
@@ -50,7 +52,7 @@ function ExploreCards(props: ExploreCardsProps) {
           }`}
         >
           {explore.map(({title, icon, icon2}, index) => (
-            <div className="flex justify-between">
+            <div key={index} className="flex justify-between">
               <div
                 role="button"
                 className="text-xs bg-primary px-3.5 rounded text-gray-200 flex items-center justify-center capitalize"
@@ -79,19 +81,15 @@ function ExploreCards(props: ExploreCardsProps) {
               {ratingpoint, ratingPerson, dolar, vanue, className, from},
               index
             ) => (
-              <div className="text-xs font-medium capitalize flex gap-2.5 items-center mb-5">
-                <span className={`text-white px-2 rounded ${className}`}>
-                  {ratingpoint}
-                </span>
-                <span className="text-gray-500">{ratingPerson}</span>
-                <div className="">
-                  <span className="border border-gray-700" />
-                  <span className="text-gray-500 pl-2">{from}</span>
-                  <span className="text-primary pr-2">{dolar}</span>
-                  <span className="border border-gray-700" />
-                </div>
-                <span className="text-gray-500">{vanue}</span>
-              </div>
+              <Rating
+                key={index}
+                ratingpoint={ratingpoint}
+                ratingPerson={ratingPerson}
+                dolar={dolar}
+                vanue={vanue}
+                className={className}
+                from={from}
+              />
             )
           )}
         </div>
@@ -103,9 +101,15 @@ function ExploreCards(props: ExploreCardsProps) {
         </div>
         <div className="border border-slate-800 mb-5" />
         <div>
-          {iconGroup.map(({offOn, icons}, index) => (
-            <div className="flex gap-6 justify-between items-center">
-              <h3 role="button" className="text-xs text-primary">
+          {iconGroup.map(({offOn, icons, classNames}, index) => (
+            <div
+              key={index}
+              className="flex gap-6 justify-between items-center"
+            >
+              <h3
+                role="button"
+                className={`text-xs text-primary ${classNames}`}
+              >
                 {offOn}
               </h3>
               <div className="flex gap-6">

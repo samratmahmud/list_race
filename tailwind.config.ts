@@ -11,7 +11,7 @@ const config: Config = {
     extend: {
       colors: {
         primary: "#ff545a",
-        red: {"500": "#fd4043", "600": "#f43032"},
+        red: {"300": "#ff7a40", "500": "#fd4043", "600": "#f43032"},
         gray: {
           "100": "#edeff1",
           "200": "#fcfcfc",
@@ -74,7 +74,7 @@ const config: Config = {
       sm: "600px",
       md: "768px",
       lg: "992px",
-      xl: "1170px",
+      xl: "1200px",
     },
   },
   plugins: [],

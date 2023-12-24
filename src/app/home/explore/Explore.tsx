@@ -1,5 +1,4 @@
 "use client";
-import {off} from "process";
 import React from "react";
 import ExploreCards from "./ExploreCards";
 
@@ -64,6 +63,7 @@ const vanuecards = [
     iconGroup: [
       {
         offOn: "Open Now",
+        classNames: "text-green-500",
         icons: [
           "/images/icons8-location-48 (1).png",
           "/images/icons8-upload-48.png",
@@ -90,6 +90,109 @@ const vanuecards = [
         vanue: "Destination",
         from: "from",
         className: "bg-orange-500",
+      },
+    ],
+    picture: "/images/person.png",
+    describtion:
+      "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incid ut labore et dolore magna aliqua....",
+    iconGroup: [
+      {
+        offOn: "Close Now",
+        icons: [
+          "/images/icons8-location-48 (1).png",
+          "/images/icons8-upload-48.png",
+          "/images/icons8-love-24.png",
+        ],
+      },
+    ],
+  },
+  {
+    thumbnail: "/images/e4.jpg",
+    explore: [
+      {
+        title: "most view",
+        icon: "/images/icons8-drag-50.png",
+        icon2: "/images/icons8-bookmark-32.png",
+      },
+    ],
+    title: "Banglow With Swiming Pool",
+    ratingSide: [
+      {
+        ratingpoint: "5.0",
+        ratingPerson: "10 Ratings ",
+        dolar: "10k$-15k$",
+        vanue: "Real Estate",
+        from: "from",
+        className: "bg-purple-400",
+      },
+    ],
+    picture: "/images/person.png",
+    describtion:
+      "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incid ut labore et dolore magna aliqua....",
+    iconGroup: [
+      {
+        offOn: "Close Now",
+        icons: [
+          "/images/icons8-location-48 (1).png",
+          "/images/icons8-upload-48.png",
+          "/images/icons8-love-24.png",
+        ],
+      },
+    ],
+  },
+  {
+    thumbnail: "/images/e5.jpg",
+    explore: [
+      {
+        title: "featured",
+        icon: "/images/icons8-drag-50.png",
+        icon2: "/images/icons8-bookmark-32.png",
+      },
+    ],
+    title: "Vintage Car Expo",
+    ratingSide: [
+      {
+        ratingpoint: "4.2",
+        ratingPerson: "8 Ratings ",
+        dolar: "500$-1200$",
+        vanue: "Automotion",
+        from: "from",
+        className: "bg-green-600",
+      },
+    ],
+    picture: "/images/person.png",
+    describtion:
+      "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incid ut labore et dolore magna aliqua....",
+    iconGroup: [
+      {
+        offOn: "Open Now",
+        classNames: "text-green-500",
+        icons: [
+          "/images/icons8-location-48 (1).png",
+          "/images/icons8-upload-48.png",
+          "/images/icons8-love-24.png",
+        ],
+      },
+    ],
+  },
+  {
+    thumbnail: "/images/e6.jpg",
+    explore: [
+      {
+        title: "best rated",
+        icon: "/images/icons8-drag-50.png",
+        icon2: "/images/icons8-bookmark-32.png",
+      },
+    ],
+    title: "Europe Tour",
+    ratingSide: [
+      {
+        ratingpoint: "5.0",
+        ratingPerson: "15 Ratings ",
+        dolar: "5k$-10k$",
+        vanue: "Destination",
+        from: "from",
+        className: "bg-red-300",
       },
     ],
     picture: "/images/person.png",
@@ -133,6 +236,7 @@ function Explore() {
               index
             ) => (
               <ExploreCards
+                key={index}
                 thumbnail={thumbnail}
                 explore={explore}
                 ratingSide={ratingSide}
