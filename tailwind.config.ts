@@ -33,7 +33,7 @@ const config: Config = {
           "800": "#e1e5eb",
         },
         purple: {"400": "#bd70ff"},
-        green: {"500": "#00c437", "600": "#00c61c"},
+        green: {"600": "#00c61c"},
         orange: {"500": "#ffcc5d"},
       },
     },

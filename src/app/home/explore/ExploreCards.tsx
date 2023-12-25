@@ -106,10 +106,7 @@ function ExploreCards(props: ExploreCardsProps) {
               key={index}
               className="flex gap-6 justify-between items-center"
             >
-              <h3
-                role="button"
-                className={`text-xs text-primary ${classNames}`}
-              >
+              <h3 role="button" className={`text-xs ${classNames}`}>
                 {offOn}
               </h3>
               <div className="flex gap-6">

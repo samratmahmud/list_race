@@ -29,6 +29,7 @@ const vanuecards = [
     iconGroup: [
       {
         offOn: "Close Now",
+        classNames: "text-red-500",
         icons: [
           "/images/icons8-location-48 (1).png",
           "/images/icons8-upload-48.png",
@@ -63,7 +64,7 @@ const vanuecards = [
     iconGroup: [
       {
         offOn: "Open Now",
-        classNames: "text-green-500",
+        classNames: "text-green-600",
         icons: [
           "/images/icons8-location-48 (1).png",
           "/images/icons8-upload-48.png",
@@ -98,6 +99,7 @@ const vanuecards = [
     iconGroup: [
       {
         offOn: "Close Now",
+        classNames: "text-red-500",
         icons: [
           "/images/icons8-location-48 (1).png",
           "/images/icons8-upload-48.png",
@@ -132,6 +134,7 @@ const vanuecards = [
     iconGroup: [
       {
         offOn: "Close Now",
+        classNames: "text-red-500",
         icons: [
           "/images/icons8-location-48 (1).png",
           "/images/icons8-upload-48.png",
@@ -166,7 +169,7 @@ const vanuecards = [
     iconGroup: [
       {
         offOn: "Open Now",
-        classNames: "text-green-500",
+        classNames: "text-green-600",
         icons: [
           "/images/icons8-location-48 (1).png",
           "/images/icons8-upload-48.png",
@@ -201,6 +204,7 @@ const vanuecards = [
     iconGroup: [
       {
         offOn: "Close Now",
+        classNames: "text-red-500",
         icons: [
           "/images/icons8-location-48 (1).png",
           "/images/icons8-upload-48.png",
