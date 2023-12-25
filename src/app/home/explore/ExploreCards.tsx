@@ -101,12 +101,17 @@ function ExploreCards(props: ExploreCardsProps) {
         </div>
         <div className="border border-slate-800 mb-5" />
         <div>
-          {iconGroup.map(({offOn, icons, classNames}, index) => (
+          {iconGroup.map(({offOn, icons}, index) => (
             <div
               key={index}
               className="flex gap-6 justify-between items-center"
             >
-              <h3 role="button" className={`text-xs ${classNames}`}>
+              <h3
+                role="button"
+                className={`text-xs ${
+                  offOn === "Close Now" ? "text-primary" : "text-green-600"
+                }`}
+              >
                 {offOn}
               </h3>
               <div className="flex gap-6">

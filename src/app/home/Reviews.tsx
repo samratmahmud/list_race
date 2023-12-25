@@ -18,8 +18,8 @@ const reviewsCards = [
   `,
   },
   {
-    name: "Tom Leakar",
-    picture: "/images/c1.png",
+    name: "monirul islam",
+    picture: "/images/c2.png",
     address: "london, UK",
     description: `
     Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis eaque.
@@ -27,7 +27,7 @@ const reviewsCards = [
   },
   {
     name: "Tom Leakar",
-    picture: "/images/c1.png",
+    picture: "/images/c4.png",
     address: "london, UK",
     description: `
     Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis eaque.
