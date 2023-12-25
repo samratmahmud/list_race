@@ -7,15 +7,15 @@ const counterProps = [
   },
   {
     count: 500,
-    title: "Projects Done",
+    title: "Listing Categories",
   },
   {
     count: 100,
-    title: "Awards Won",
+    title: "Visitors",
   },
   {
     count: 100,
-    title: "Cups of Coffee",
+    title: "Happy Clients",
   },
 ];
 
@@ -32,13 +32,16 @@ function ReviewCounter() {
       </div>
       <div className="container">
         <div className="absolute top-32 bottom-32 z-30">
-          <div className="flex gap-10">
+          <div className="flex gap-8">
             {counterProps.map(({count, title}, index) => (
-              <div key={index}>
-                <div className="flex items-center justify-center">
-                  <div className="text-white text-4xl font-bold">{count}</div>
-                  <div className="text-white text-2xl font-bold">{title}</div>
+              <div key={index} className="mb-6 flex flex-col items-center">
+                <div className="text-5xl text-white">
+                  {count}
+                  <span>K+</span>
                 </div>
+                <h3 className="text-white text-xl capitalize font-medium">
+                  {title}
+                </h3>
               </div>
             ))}
           </div>
