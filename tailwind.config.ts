@@ -60,6 +60,7 @@ const config: Config = {
     },
     backgroundImage: {
       headerImages: "url('/images/banner.jpg')",
+      count: "url('/images/counter-banner.jpg')",
     },
     fontFamily: {
       Poppins: ["'Poppins'", ...fontFamily.sans],

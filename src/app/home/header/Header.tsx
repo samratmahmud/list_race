@@ -4,7 +4,7 @@ import Link from "next/link";
 
 function Header() {
   return (
-    <section className="bg-headerImages bg-cover bg-no-repeat pt-40 pb-60 relative">
+    <section className="bg-headerImages bg-center bg-cover bg-no-repeat pt-[155px] pb-60 relative">
       <div
         className="w-full top-0 bottom-0 absolute"
         style={{

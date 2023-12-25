@@ -1,50 +1,43 @@
+"use client";
 import React from "react";
+import CountUp from "react-countup";
 
 const counterProps = [
   {
-    count: 100,
+    count: <CountUp start={0} end={90} duration={8} />,
     title: "Listings",
   },
   {
-    count: 500,
+    count: <CountUp start={0} end={40} duration={8} />,
     title: "Listing Categories",
   },
   {
-    count: 100,
+    count: <CountUp start={0} end={65} duration={8} />,
     title: "Visitors",
   },
   {
-    count: 100,
+    count: <CountUp start={0} end={50} duration={8} />,
     title: "Happy Clients",
   },
 ];
 
 function ReviewCounter() {
   return (
-    <section className="relative">
-      <div className="relative">
-        <img
-          className="bg-cover bg-no-repeat"
-          src="/images/counter-banner.jpg"
-          alt=""
-        />
-        <div className="bg-[rgba(75,75,75,.60)] w-full h-full absolute top-0 bottom-0" />
-      </div>
-      <div className="container">
-        <div className="absolute top-32 bottom-32 z-30">
-          <div className="flex gap-8">
-            {counterProps.map(({count, title}, index) => (
-              <div key={index} className="mb-6 flex flex-col items-center">
-                <div className="text-5xl text-white">
-                  {count}
-                  <span>K+</span>
-                </div>
-                <h3 className="text-white text-xl capitalize font-medium">
-                  {title}
-                </h3>
+    <section>
+      <div className="container py-32">
+        <div className="flex justify-between gap-8 m-auto">
+          {counterProps.map(({count, title}, index) => (
+            <div
+              key={index}
+              className="mb-6 flex flex-col items-center text-white relative z-20"
+            >
+              <div className="text-5xl">
+                {count}
+                <span>K+</span>
               </div>
-            ))}
-          </div>
+              <h3 className="text-xl capitalize font-medium">{title}</h3>
+            </div>
+          ))}
         </div>
       </div>
     </section>
