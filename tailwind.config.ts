@@ -56,7 +56,8 @@ const config: Config = {
       xl: "0 0px 10px rgba(21,19,19,.1)",
       "2xl": "0 5px 20px rgba(21,19,19,.4)",
       "3xl": "0 2px 5px rgba(0,0,0,.2)",
-      "4xl": "0 10px 20px rgba(21,19,19,.2)",
+      "4xl": "0 10px 20px rgba(21,19,19,0.2)",
+      "5xl": "0 5px 10px rgba(71,71,71,.4)",
     },
     backgroundImage: {
       headerImages: "url('/images/banner.jpg')",

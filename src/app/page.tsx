@@ -1,9 +1,11 @@
 import Explore from "./home/explore/Explore";
 import HowItWork from "./home/HowItWork";
-import Header from "./home/header/Header";
+import Header from "./home/Header";
 import Reviews from "./home/Reviews";
 import ReviewCounter from "./home/ReviewCounter";
 import ArticlesBlog from "./home/ArticlesBlog";
+import Contact from "./home/Contact";
+import Footer from "@/components/global/footer/Footer";
 
 export default function Home() {
   return (
@@ -17,6 +19,8 @@ export default function Home() {
         <ReviewCounter />
       </div>
       <ArticlesBlog />
+      <Contact />
+      <Footer />
     </main>
   );
 }

@@ -1,5 +1,5 @@
 import React from "react";
-import InputField from "./InputField";
+import InputField from "../../components/common/InputField";
 import Link from "next/link";
 
 function Header() {
@@ -23,6 +23,7 @@ function Header() {
           <div className="flex bg-white rounded w-full">
             <span className="w-full">
               <InputField
+                className="text-sm placeholder:capitalize capitalize"
                 title="what?"
                 icon="/images/icons8-bulleted-list-48.png"
                 placeholder="Ex: palce, resturent, food, automobile"
@@ -30,6 +31,7 @@ function Header() {
             </span>
             <span className="w-full">
               <InputField
+                className="text-sm placeholder:capitalize capitalize"
                 title="location"
                 icon="/images/icons8-eye-24.png"
                 placeholder="Ex: london, newyork, rome"
@@ -38,7 +40,7 @@ function Header() {
           </div>
           <Link
             href=""
-            className="bg-red-500 hover:bg-red-600 duration-300 rounded flex gap-3 items-center cursor-pointer px-12 py-[25px]"
+            className="bg-red-500 hover:bg-red-600 duration-300 rounded flex gap-3 items-center cursor-pointer px-[50px] py-[25px]"
           >
             <p className="text-sm text-white">Search </p>
             <img

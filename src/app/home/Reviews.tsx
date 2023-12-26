@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, {useState} from "react";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
@@ -72,6 +72,15 @@ const reviewsCards = [
 ];
 
 function Reviews() {
+  const [middleItemIndex, setMiddleItemIndex] = useState(
+    Math.floor(reviewsCards.length / 2)
+  );
+  const handleSliderAfterChange = (
+    currentIndex: React.SetStateAction<number>
+  ) => {
+    setMiddleItemIndex(currentIndex);
+  };
+
   const settings = {
     dots: false,
     infinite: true,
@@ -80,7 +89,7 @@ function Reviews() {
     slidesToScroll: 1,
     centerMode: true,
     autoplay: true,
-    autoplaySpeed: 3000,
+    autoplaySpeed: 2000,
     responsive: [
       {
         breakpoint: 1920,
@@ -106,6 +115,7 @@ function Reviews() {
       },
     ],
   };
+
   return (
     <section>
       <div className="containe my-28">
@@ -117,12 +127,17 @@ function Reviews() {
         </p>
         <Slider
           {...settings}
-          className="flex justify-between gap-6 py-2 overflow-hidden"
+          afterChange={handleSliderAfterChange}
+          className="flex justify-between gap-6"
         >
           {reviewsCards.map(({name, picture, address, description}, index) => (
             <div
               key={index}
-              className="hover:shadow-4xl duration-300 border border-slate-800 py-[50px] px-[30px] max-w-[415px] m-auto ml-2.5 mr-2.5"
+              className={`${
+                index === middleItemIndex
+                  ? "shadow-4xl duration-200"
+                  : "hover:shadow-md duration-200"
+              } border border-slate-800 py-[50px] px-[30px] max-w-[415px] m-auto ml-2.5 mr-2.5 my-6`}
             >
               <div className="flex items-center gap-6 mb-5">
                 <div>

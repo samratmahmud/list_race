@@ -31,7 +31,7 @@ const navbarLinks = [
 function Navbar() {
   return (
     <nav className="sticky top-0 z-[1020]">
-      <div className="md:px-5 py-[3px] left-0 right-0 bg-white shadow-3xl">
+      <div className="md:px-5 py-[3px] bg-white shadow-3xl">
         <div className="container flex items-center justify-between gap-2">
           <div className="text-lg font-bold py-[30px]">
             List<span className="text-primary">Race</span>

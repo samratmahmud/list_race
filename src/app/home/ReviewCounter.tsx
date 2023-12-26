@@ -1,42 +1,50 @@
 "use client";
-import React from "react";
+import React, {useState} from "react";
+import VisibilitySensor from "react-visibility-sensor";
 import CountUp from "react-countup";
 
 const counterProps = [
   {
-    count: <CountUp start={0} end={90} duration={8} />,
+    end: 90,
     title: "Listings",
   },
   {
-    count: <CountUp start={0} end={40} duration={8} />,
+    end: 40,
     title: "Listing Categories",
   },
   {
-    count: <CountUp start={0} end={65} duration={8} />,
+    end: 65,
     title: "Visitors",
   },
   {
-    count: <CountUp start={0} end={50} duration={8} />,
+    end: 50,
     title: "Happy Clients",
   },
 ];
 
 function ReviewCounter() {
+  const [isVisible, setIsVisible] = useState(false);
+
+  const onVisibilityChange = (isVisible: any) => {
+    if (isVisible) {
+      setIsVisible(true);
+    }
+  };
+
   return (
     <section>
       <div className="container py-32">
         <div className="flex justify-between gap-8 m-auto">
-          {counterProps.map(({count, title}, index) => (
-            <div
-              key={index}
-              className="mb-6 flex flex-col items-center text-white relative z-20"
-            >
-              <div className="text-5xl">
-                {count}
-                <span>K+</span>
+          {counterProps.map(({end, title}, index) => (
+            <VisibilitySensor key={index} onChange={onVisibilityChange}>
+              <div className="mb-6 flex flex-col items-center text-white relative z-20">
+                <div className="text-5xl">
+                  {isVisible && <CountUp start={0} end={end} duration={8} />}
+                  <span>K+</span>
+                </div>
+                <h3 className="text-xl capitalize font-medium">{title}</h3>
               </div>
-              <h3 className="text-xl capitalize font-medium">{title}</h3>
-            </div>
+            </VisibilitySensor>
           ))}
         </div>
       </div>
