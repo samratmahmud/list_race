@@ -1,34 +1,37 @@
-import Link from "next/link";
-import React from "react";
+"use client";
+import React, {useEffect, useRef} from "react";
+import NavLinks from "./NavLinks";
 
 const navbarLinks = [
   {
     name: "Home",
-    href: "/",
+    href: "#header",
   },
   {
     name: "how it works",
-    href: "/",
+    href: "#howIt",
   },
   {
     name: "explore",
-    href: "/",
+    href: "#explore",
   },
   {
     name: "review",
-    href: "/",
+    href: "#review",
   },
   {
     name: "blog",
-    href: "/",
+    href: "#article",
   },
   {
     name: "contact",
-    href: "/",
+    href: "#contact",
   },
 ];
 
 function Navbar() {
+  const [tab, setTab] = React.useState(-1);
+
   return (
     <nav className="sticky top-0 z-[1020]">
       <div className="md:px-5 py-[3px] bg-white shadow-3xl">
@@ -38,13 +41,13 @@ function Navbar() {
           </div>
           <div className="flex gap-[42px]">
             {navbarLinks.map(({name, href}, index) => (
-              <Link
-                href={href}
+              <NavLinks
                 key={index}
-                className="text-sm font-medium text-slate-500 uppercase hover:text-primary duration-200 py-[30px]"
-              >
-                {name}
-              </Link>
+                name={name}
+                href={href}
+                isActive={index === tab}
+                handelClick={() => setTab(index)}
+              />
             ))}
           </div>
         </div>

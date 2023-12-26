@@ -55,7 +55,7 @@ const loremCards = [
 function HowItWork() {
   return (
     <section>
-      <div className="container mb-[90px]">
+      <div id="howIt" className="container mb-[90px]">
         <div className="flex flex-wrap gap-5 justify-between mb-5 relative -top-24 z-50">
           {itemsCards.map(({icon, title, description}, index) => (
             <div

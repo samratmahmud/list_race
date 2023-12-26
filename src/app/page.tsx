@@ -6,6 +6,7 @@ import ReviewCounter from "./home/ReviewCounter";
 import ArticlesBlog from "./home/ArticlesBlog";
 import Contact from "./home/Contact";
 import Footer from "@/components/global/footer/Footer";
+import UpButton from "@/components/common/UpButton";
 
 export default function Home() {
   return (
@@ -21,6 +22,7 @@ export default function Home() {
       <ArticlesBlog />
       <Contact />
       <Footer />
+      {/* <UpButton /> */}
     </main>
   );
 }

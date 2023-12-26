@@ -32,7 +32,7 @@ const articlesCards = [
 
 function ArticlesBlog() {
   return (
-    <section>
+    <section id="article">
       <div className="container my-[120px]">
         <h2 className="text-xl font-medium mb-6 text-slate-500 text-center">
           NEWS AND ARTICLES

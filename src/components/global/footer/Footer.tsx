@@ -1,5 +1,7 @@
+"use client";
 import Link from "next/link";
 import React from "react";
+import SocialMedia from "./SocialMedia";
 
 const navbarLinks = [
   {
@@ -28,11 +30,35 @@ const navbarLinks = [
   },
 ];
 
+const socialLinks = [
+  {
+    icon: "/images/icons8-fb-24.png",
+    icon2: "/images/icons8-fb-30.png",
+    href: "/",
+  },
+  {
+    icon: "/images/icons8-twitter-24.png",
+    icon2: "/images/icons8-twitter-30.png",
+    href: "/",
+  },
+  {
+    icon: "/images/icons8-linkedin-30.png",
+    icon2: "/images/icons8-linkedin-32.png",
+    href: "/",
+  },
+  {
+    icon: "/images/icons8-google-plus-50.png",
+    icon2: "/images/icons8-google-plus-50 (1).png",
+    href: "/",
+  },
+];
+
 function Footer() {
+  const [callIcon, setCallIcon] = React.useState(false);
   return (
     <section>
-      <div className="md:px-5 py-[3px]">
-        <div className="container flex items-center justify-between gap-2">
+      <div className="container">
+        <div className="flex items-center justify-between gap-2">
           <div className="text-lg font-bold py-11">
             List<span className="text-primary">Race</span>
           </div>
@@ -46,6 +72,41 @@ function Footer() {
                 {name}
               </Link>
             ))}
+          </div>
+        </div>
+        <div className="border border-slate-800" />
+        <div className="py-10 flex items-center justify-between gap-4">
+          <p className="text-sm text-slate-300 capitalize">
+            ©Copyright. Designed And Developed By{" "}
+            <Link href="https://themesine.com/">Themesine</Link>{" "}
+          </p>
+          <div className="flex gap-4 items-center">
+            <span
+              className="flex text-slate-300 hover:text-primary duration-300"
+              onMouseEnter={() => setCallIcon(true)}
+              onMouseLeave={() => setCallIcon(false)}
+            >
+              <img
+                className="w-5 h-5"
+                src={`${
+                  callIcon
+                    ? "/images/icons8-call-30.png"
+                    : "/images/icons8-call-25.png"
+                }`}
+                alt=""
+              />
+              <p className="text-sm"> +1 (222) 777 8888</p>
+            </span>
+            <div className="flex gap-4">
+              {socialLinks.map(({icon, icon2, href}, index) => (
+                <SocialMedia
+                  key={index}
+                  href={href}
+                  icon={icon}
+                  icon2={icon2}
+                />
+              ))}
+            </div>
           </div>
         </div>
       </div>

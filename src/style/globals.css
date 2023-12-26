@@ -13,3 +13,7 @@
 body {
   @apply font-Poppins;
 }
+
+html {
+  scroll-behavior: smooth;
+}

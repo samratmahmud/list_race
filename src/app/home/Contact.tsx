@@ -3,7 +3,7 @@ import React from "react";
 
 function Contact() {
   return (
-    <section className="bg-slate-200 py-[150px]">
+    <section id="contact" className="bg-slate-200 py-[150px]">
       <div className="container">
         <h2 className="text-xl font-medium uppercase mb-7 text-gray-800 text-center">
           DO YOU WANT TO ADD YOUR BUSINESS LISTING WITH US?
@@ -20,7 +20,7 @@ function Contact() {
               placeholder="Enter your email here"
             />
           </span>
-          <button className="bg-red-600 text-md text-white font-medium flex-shrink-0 px-8 rounded-r">
+          <button className="bg-red-600 text-md text-white font-medium flex-shrink-0 px-8 capitalize rounded-r">
             creat account
           </button>
         </label>

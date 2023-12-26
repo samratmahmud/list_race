@@ -117,7 +117,7 @@ function Reviews() {
   };
 
   return (
-    <section>
+    <section id="review">
       <div className="containe my-28">
         <h2 className="text-xl font-medium mb-6 text-slate-500 text-center">
           CLIENTS REVIEWS
