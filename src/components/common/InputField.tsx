@@ -9,7 +9,7 @@ interface inputFieldProps extends React.HTMLProps<HTMLInputElement> {
 function InputField(props: inputFieldProps) {
   const {icon, title, className, ...rest} = props;
   return (
-    <label className="flex items-center px-[30px]">
+    <label className="flex items-center md:px-[30px] px-4">
       {title && (
         <span className="text-base font-medium text-gray-800 py-[25px] capitalize">
           {title}

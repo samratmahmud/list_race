@@ -17,3 +17,21 @@ body {
 html {
   scroll-behavior: smooth;
 }
+
+.animate-bounce-custom {
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in;
+  animation-name: animate-bounce;
+}
+@keyframes animate-bounce {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}

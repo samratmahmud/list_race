@@ -56,7 +56,7 @@ function HowItWork() {
   return (
     <section>
       <div id="howIt" className="container mb-[90px]">
-        <div className="flex flex-wrap gap-5 justify-between mb-5 relative -top-24 z-50">
+        <div className="flex flex-wrap md:gap-7 gap-5 lg:justify-between md:mb-5 relative md:-top-24 z-50 my-[60px] md:my-0">
           {itemsCards.map(({icon, title, description}, index) => (
             <div
               key={index}
@@ -78,7 +78,7 @@ function HowItWork() {
         <p className="text-md text-slate-400 text-center mb-[73px]">
           Learn More about how our website works
         </p>
-        <div className="grid grid-cols-3 gap-8">
+        <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-7">
           {loremCards.map(({icon, title, contain, btn}, index) => (
             <div
               key={index}

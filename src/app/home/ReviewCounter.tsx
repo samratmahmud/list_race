@@ -33,19 +33,22 @@ function ReviewCounter() {
 
   return (
     <section>
-      <div className="container py-32">
-        <div className="flex justify-between gap-8 m-auto">
-          {counterProps.map(({end, title}, index) => (
-            <VisibilitySensor key={index} onChange={onVisibilityChange}>
-              <div className="mb-6 flex flex-col items-center text-white relative z-20">
-                <div className="text-5xl">
-                  {isVisible && <CountUp start={0} end={end} duration={8} />}
-                  <span>K+</span>
+      <div className="bg-cover bg-center bg-no-repeat min-h-[390px] bg-count relative">
+        <div className="bg-[rgba(75,75,75,.60)] w-full h-full absolute top-0 bottom-0" />
+        <div className="container py-32">
+          <div className="flex justify-between gap-8 m-auto">
+            {counterProps.map(({end, title}, index) => (
+              <VisibilitySensor key={index} onChange={onVisibilityChange}>
+                <div className="mb-6 flex flex-col items-center text-white relative z-20">
+                  <div className="text-5xl">
+                    {isVisible && <CountUp start={0} end={end} duration={8} />}
+                    <span>K+</span>
+                  </div>
+                  <h3 className="text-xl capitalize font-medium">{title}</h3>
                 </div>
-                <h3 className="text-xl capitalize font-medium">{title}</h3>
-              </div>
-            </VisibilitySensor>
-          ))}
+              </VisibilitySensor>
+            ))}
+          </div>
         </div>
       </div>
     </section>

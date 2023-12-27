@@ -6,7 +6,7 @@ function Header() {
   return (
     <section
       id="header"
-      className="bg-headerImages bg-center bg-cover bg-no-repeat md:pt-[155px] pt-20 pb-60 relative"
+      className="bg-headerImages bg-center bg-cover bg-no-repeat md:pt-[155px] pt-20 md:pb-60 pb-24 relative"
     >
       <div
         className="w-full top-0 bottom-0 absolute"
@@ -15,7 +15,7 @@ function Header() {
         }}
       />
       <div className="container relative z-10">
-        <h1 className="lg:text-4xl md:text-3xl text-xl text-white font-bold text-center mb-6">
+        <h1 className="lg:text-4xl md:text-3xl text-xl text-white font-bold text-center tracking-[2.4px] mb-6">
           BEST PLACE TO FIND AND EXPLORE <br /> THAT ALL YOU NEED
         </h1>
         <p className="text-base text-gray-200 text-center leading-[1.8] mb-20">
@@ -44,7 +44,7 @@ function Header() {
           <div className="flex justify-center">
             <Link
               href=""
-              className="bg-red-500 hover:bg-red-600 duration-300 rounded flex gap-3 items-center cursor-pointer px-[50px] py-[25px]"
+              className="bg-red-500 hover:bg-red-600 duration-300 rounded flex gap-3 items-center cursor-pointer px-[50px] md:py-[25px] py-5"
             >
               <p className="text-sm text-white">Search </p>
               <img

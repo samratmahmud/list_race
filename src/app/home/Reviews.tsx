@@ -75,10 +75,8 @@ function Reviews() {
   const [middleItemIndex, setMiddleItemIndex] = useState(
     Math.floor(reviewsCards.length / 2)
   );
-  const handleSliderAfterChange = (
-    currentIndex: React.SetStateAction<number>
-  ) => {
-    setMiddleItemIndex(currentIndex);
+  const handleSliderBeforeChange = (currentIndex: number) => {
+    setMiddleItemIndex(currentIndex + 1);
   };
 
   const settings = {
@@ -125,46 +123,44 @@ function Reviews() {
         <p className="text-md text-slate-400 mb-9 text-center">
           What our client say about us
         </p>
-        <Slider
-          {...settings}
-          afterChange={handleSliderAfterChange}
-          className="flex justify-between gap-6"
-        >
+        <Slider {...settings} beforeChange={handleSliderBeforeChange}>
           {reviewsCards.map(({name, picture, address, description}, index) => (
-            <div
-              key={index}
-              className={`${
-                index === middleItemIndex
-                  ? "shadow-4xl duration-200"
-                  : "hover:shadow-md duration-200"
-              } border border-slate-800 py-[50px] px-[30px] max-w-[415px] m-auto ml-2.5 mr-2.5 my-6`}
-            >
-              <div className="flex items-center gap-6 mb-5">
-                <div>
-                  <img src={picture} alt="" />
-                </div>
-                <div>
-                  <h2 className="text-base text-gray-800 font-medium mb-2.5">
-                    {name}
-                  </h2>
-                  <div className="text-sm text-gray-300 capitalize mb-1">
-                    {address}
+            <div className="px-3">
+              <div
+                key={index}
+                className={`${
+                  index === middleItemIndex
+                    ? "shadow-4xl duration-200"
+                    : "hover:shadow-md duration-200"
+                } border border-slate-800 py-[50px] px-[30px] max-w-[415px] m-auto my-6`}
+              >
+                <div className="flex items-center gap-6 mb-5">
+                  <div>
+                    <img src={picture} alt="" />
                   </div>
-                  <div className="flex gap-1">
-                    {[...Array(5)].map((_, index) => (
-                      <img
-                        key={index}
-                        className="w-4 h-4"
-                        src="/images/icons8-star-48.png"
-                        alt=""
-                      />
-                    ))}
+                  <div>
+                    <h2 className="text-base text-gray-800 font-medium mb-2.5">
+                      {name}
+                    </h2>
+                    <div className="text-sm text-gray-300 capitalize mb-1">
+                      {address}
+                    </div>
+                    <div className="flex gap-1">
+                      {[...Array(5)].map((_, index) => (
+                        <img
+                          key={index}
+                          className="w-4 h-4"
+                          src="/images/icons8-star-48.png"
+                          alt=""
+                        />
+                      ))}
+                    </div>
                   </div>
                 </div>
+                <p className="text-sm text-gray-300 leading-[1.8]">
+                  {description}
+                </p>
               </div>
-              <p className="text-sm text-gray-300 leading-[1.8]">
-                {description}
-              </p>
             </div>
           ))}
         </Slider>
