@@ -68,7 +68,7 @@ function Navbar() {
             direction="top"
             style={{height: "65%"}}
           >
-            <div className="container h-[70%]">
+            <div className="container">
               <div>
                 <NavLogo toggle={toggle} icon="/images/icons8-close-30.png" />
               </div>

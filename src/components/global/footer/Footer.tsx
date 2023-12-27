@@ -58,16 +58,16 @@ function Footer() {
   return (
     <section>
       <div className="container">
-        <div className="flex items-center justify-between gap-2">
-          <div className="text-lg font-bold py-11">
+        <div className="flex md:flex-row flex-col md:items-center md:justify-between gap-5 py-11">
+          <div className="text-lg font-bold">
             List<span className="text-primary">Race</span>
           </div>
-          <div className="flex gap-[42px]">
+          <div className="flex flex-wrap lg:gap-[42px] gap-4">
             {navbarLinks.map(({name, href}, index) => (
               <Link
                 href={href}
                 key={index}
-                className="text-sm font-medium text-slate-500 uppercase hover:text-primary duration-200 py-[30px]"
+                className="text-sm font-medium text-slate-500 uppercase hover:text-primary duration-200"
               >
                 {name}
               </Link>
@@ -75,14 +75,14 @@ function Footer() {
           </div>
         </div>
         <div className="border border-slate-800" />
-        <div className="py-10 flex items-center justify-between gap-4">
+        <div className="py-10 flex md:flex-row flex-col md:items-center md:justify-between gap-5">
           <p className="text-sm text-slate-300 capitalize">
             ©Copyright. Designed And Developed By{" "}
             <Link href="https://themesine.com/">Themesine</Link>{" "}
           </p>
-          <div className="flex gap-4 items-center">
+          <div className="flex sm:flex-row flex-col md:gap-4 sm:gap-7 gap-4 sm:items-center">
             <span
-              className="flex text-slate-300 hover:text-primary duration-300"
+              className="flex text-slate-300 hover:text-primary duration-300 flex-shrink-0"
               onMouseEnter={() => setCallIcon(true)}
               onMouseLeave={() => setCallIcon(false)}
             >

@@ -16,9 +16,9 @@ export default function Home() {
       <Explore />
       <Reviews />
       <ReviewCounter />
-      {/* <ArticlesBlog /> */}
-      {/* <Contact /> */}
-      {/* <Footer /> */}
+      <ArticlesBlog />
+      <Contact />
+      <Footer />
       <UpButton />
     </main>
   );

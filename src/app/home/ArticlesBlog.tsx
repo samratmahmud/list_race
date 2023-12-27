@@ -33,14 +33,14 @@ const articlesCards = [
 function ArticlesBlog() {
   return (
     <section id="article">
-      <div className="container my-[120px]">
-        <h2 className="text-xl font-medium mb-6 text-slate-500 text-center">
+      <div className="container lg:my-[120px] md:my-20 my-12">
+        <h2 className="text-xl font-medium md:mb-6 mb-4 text-slate-500 text-center">
           NEWS AND ARTICLES
         </h2>
-        <p className="text-md text-slate-400 mb-20 text-center">
+        <p className="text-md text-slate-400 md:mb-20 mb-10 text-center">
           Always upto date with our latest News and Articles
         </p>
-        <div className="grid grid-cols-3 gap-7">
+        <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-7">
           {articlesCards.map(
             ({thumbnail, title, postman, admin, date, description}, index) => (
               <div

@@ -7,7 +7,7 @@ function UpButton() {
 
   useEffect(() => {
     const handelScroll = () => {
-      if (window.scrollY >= 250) {
+      if (window.scrollY >= 350) {
         setIsVisible(true);
       } else {
         setIsVisible(false);
