@@ -18,6 +18,7 @@ function SocialMedia(props: mediaProps) {
       onMouseEnter={() => setIconShow(true)}
       onMouseLeave={() => setIconShow(false)}
       className="bg-slate-100 px-2 py-1.5 rounded-full hover:bg-primary duration-300 w-9 h-9 flex items-center justify-center"
+      target="_blank"
     >
       <img src={`${!iconShow ? `${icon}` : `${icon2}`}`} alt="" />
     </Link>

@@ -43,7 +43,7 @@ const config: Config = {
       md: ["16px", {lineHeight: "1.8"}],
       base: ["18px", {lineHeight: "20px"}],
       lg: ["20px", {lineHeight: "20px"}],
-      xl: ["24px", {lineHeight: "20px", letterSpacing: "1.3px"}],
+      xl: ["24px", {lineHeight: "1.4", letterSpacing: "1.3px"}],
       "2xl": ["30px", {lineHeight: "20px"}],
       "3xl": ["40px", {lineHeight: "1.4", letterSpacing: "2.4px"}],
       "4xl": ["48px", {lineHeight: "1.4", letterSpacing: "2.4px"}],

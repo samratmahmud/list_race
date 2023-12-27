@@ -15,7 +15,7 @@ function NavLinks(props: INavLinks) {
       <Link
         href={href}
         className={`text-sm font-medium uppercase hover:text-primary duration-200 py-[30px] ${
-          isActive ? "text-primary" : "text-slate-500"
+          isActive ? "text-primary" : "text-slate-600"
         }`}
       >
         {name}
