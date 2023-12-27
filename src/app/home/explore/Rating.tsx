@@ -13,7 +13,7 @@ function Rating(props: RatingProps) {
   const {ratingpoint, ratingPerson, dolar, vanue, from, className} = props;
 
   return (
-    <div className="text-xs font-medium capitalize flex gap-2.5 items-center mb-5">
+    <div className="text-xs font-medium capitalize flex flex-wrap gap-2.5 items-center mb-5">
       <span className={`text-white px-2 rounded ${className}`}>
         {ratingpoint}
       </span>

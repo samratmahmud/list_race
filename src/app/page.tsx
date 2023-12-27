@@ -14,8 +14,8 @@ export default function Home() {
       <Header />
       <HowItWork />
       <Explore />
-      {/* <Reviews /> */}
-      {/* <ReviewCounter /> */}
+      <Reviews />
+      <ReviewCounter />
       {/* <ArticlesBlog /> */}
       {/* <Contact /> */}
       {/* <Footer /> */}

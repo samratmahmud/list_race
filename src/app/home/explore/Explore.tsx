@@ -8,8 +8,6 @@ const vanuecards = [
     explore: [
       {
         title: "best rated",
-        icon: "/images/icons8-drag-50.png",
-        icon2: "/images/icons8-bookmark-32.png",
       },
     ],
     title: "Tommy Helfinger Bar",
@@ -42,8 +40,6 @@ const vanuecards = [
     explore: [
       {
         title: "featured",
-        icon: "/images/icons8-drag-50.png",
-        icon2: "/images/icons8-bookmark-32.png",
       },
     ],
     title: "Swim And Dine Resort",
@@ -76,8 +72,6 @@ const vanuecards = [
     explore: [
       {
         title: "best rated",
-        icon: "/images/icons8-drag-50.png",
-        icon2: "/images/icons8-bookmark-32.png",
       },
     ],
     title: "Europe Tour",
@@ -110,8 +104,6 @@ const vanuecards = [
     explore: [
       {
         title: "most view",
-        icon: "/images/icons8-drag-50.png",
-        icon2: "/images/icons8-bookmark-32.png",
       },
     ],
     title: "Banglow With Swiming Pool",
@@ -144,8 +136,6 @@ const vanuecards = [
     explore: [
       {
         title: "featured",
-        icon: "/images/icons8-drag-50.png",
-        icon2: "/images/icons8-bookmark-32.png",
       },
     ],
     title: "Vintage Car Expo",
@@ -178,8 +168,6 @@ const vanuecards = [
     explore: [
       {
         title: "best rated",
-        icon: "/images/icons8-drag-50.png",
-        icon2: "/images/icons8-bookmark-32.png",
       },
     ],
     title: "Europe Tour",
@@ -211,15 +199,18 @@ const vanuecards = [
 
 function Explore() {
   return (
-    <section id="explore" className="bg-slate-200 pt-[117px] pb-24">
+    <section
+      id="explore"
+      className="bg-slate-200 lg:pt-[117px] md:pt-20 pt-12 lg:pb-24 md:pb-16 pb-12"
+    >
       <div className="container">
-        <h2 className="text-xl font-medium mb-6 text-slate-500 text-center">
+        <h2 className="text-xl font-medium md:mb-6 mb-4 text-slate-500 text-center">
           EXPLORE
         </h2>
-        <p className="text-md text-slate-400 mb-20 text-center">
+        <p className="text-md text-slate-400 lg:mb-20 md:mb-14 mb-12 text-center">
           Explore New place, food, culture around the world and many more
         </p>
-        <div className="grid grid-cols-3 gap-7">
+        <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-7">
           {vanuecards.map(
             (
               {

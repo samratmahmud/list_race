@@ -55,7 +55,7 @@ const loremCards = [
 function HowItWork() {
   return (
     <section>
-      <div id="howIt" className="container mb-[90px]">
+      <div id="howIt" className="container lg:mb-[90px] md:mb-16 mb-10">
         <div className="flex flex-wrap md:gap-7 gap-5 lg:justify-between md:mb-5 relative md:-top-24 z-50 my-[60px] md:my-0">
           {itemsCards.map(({icon, title, description}, index) => (
             <div
@@ -72,10 +72,10 @@ function HowItWork() {
             </div>
           ))}
         </div>
-        <h2 className="text-xl font-medium text-slate-500 text-center mb-6">
+        <h2 className="text-xl font-medium text-slate-500 text-center md:mb-6 mb-4">
           HOW IT WORKS
         </h2>
-        <p className="text-md text-slate-400 text-center mb-[73px]">
+        <p className="text-md text-slate-400 text-center md:mb-[73px] mb-14">
           Learn More about how our website works
         </p>
         <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-7">

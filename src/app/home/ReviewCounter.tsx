@@ -36,7 +36,7 @@ function ReviewCounter() {
       <div className="bg-cover bg-center bg-no-repeat min-h-[390px] bg-count relative">
         <div className="bg-[rgba(75,75,75,.60)] w-full h-full absolute top-0 bottom-0" />
         <div className="container py-32">
-          <div className="flex justify-between gap-8 m-auto">
+          <div className="grid lg:grid-cols-4 md:grid-cols-2 justify-between gap-8 m-auto">
             {counterProps.map(({end, title}, index) => (
               <VisibilitySensor key={index} onChange={onVisibilityChange}>
                 <div className="mb-6 flex flex-col items-center text-white relative z-20">

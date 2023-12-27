@@ -105,6 +105,13 @@ function Reviews() {
         },
       },
       {
+        breakpoint: 992,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+        },
+      },
+      {
         breakpoint: 768,
         settings: {
           slidesToShow: 1,
@@ -116,8 +123,8 @@ function Reviews() {
 
   return (
     <section id="review">
-      <div className="containe my-28">
-        <h2 className="text-xl font-medium mb-6 text-slate-500 text-center">
+      <div className="containe lg:my-28 md:my-20 my-14 overflow-hidden">
+        <h2 className="text-xl font-medium md:mb-6 mb-4 text-slate-500 text-center">
           CLIENTS REVIEWS
         </h2>
         <p className="text-md text-slate-400 mb-9 text-center">
@@ -125,13 +132,12 @@ function Reviews() {
         </p>
         <Slider {...settings} beforeChange={handleSliderBeforeChange}>
           {reviewsCards.map(({name, picture, address, description}, index) => (
-            <div className="px-3">
+            <div key={index} className="md:px-3 px-1">
               <div
-                key={index}
                 className={`${
                   index === middleItemIndex
                     ? "shadow-4xl duration-200"
-                    : "hover:shadow-md duration-200"
+                    : "hover:shadow-md duration-200 opacity-50"
                 } border border-slate-800 py-[50px] px-[30px] max-w-[415px] m-auto my-6`}
               >
                 <div className="flex items-center gap-6 mb-5">

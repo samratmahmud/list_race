@@ -15,14 +15,16 @@ function Header() {
         }}
       />
       <div className="container relative z-10">
-        <h1 className="lg:text-4xl md:text-3xl text-xl text-white font-bold text-center tracking-[2.4px] mb-6">
-          BEST PLACE TO FIND AND EXPLORE <br /> THAT ALL YOU NEED
-        </h1>
-        <p className="text-base text-gray-200 text-center leading-[1.8] mb-20">
-          Find Best Place, Restaurant, Hotel, Real State and many more think in
-          just One click
-        </p>
-        <div className="flex lg:flex-row flex-col gap-7">
+        <div className="animate__animated animate__slideInUp animate__fast	800ms">
+          <h1 className="lg:text-4xl md:text-3xl text-xl text-white font-bold text-center tracking-[2.4px] mb-6">
+            BEST PLACE TO FIND AND EXPLORE <br /> THAT ALL YOU NEED
+          </h1>
+          <p className="text-base text-gray-200 text-center leading-[1.8] mb-20">
+            Find Best Place, Restaurant, Hotel, Real State and many more think
+            in just One click
+          </p>
+        </div>
+        <div className="flex lg:flex-row flex-col gap-7 animate__animated animate__slideInDown animate__fast	800ms">
           <div className="flex md:flex-row flex-col md:bg-white rounded w-full gap-7 md:gap-0">
             <span className="w-full bg-white rounded">
               <InputField
