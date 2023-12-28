@@ -90,7 +90,7 @@ function Reviews() {
     autoplaySpeed: 2000,
     responsive: [
       {
-        breakpoint: 1920,
+        breakpoint: 19200,
         settings: {
           slidesToShow: 5,
           slidesToScroll: 1,
